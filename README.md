@@ -2,7 +2,9 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.0.3.
 
-## Set up
+The user can view product detail, add product to cart, edit or removed product from the cart, and check-out.
+
+## Setup
 Run `npm install`
 
 ## Development server
