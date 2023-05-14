@@ -1,0 +1,30 @@
+<div class="card mb-3">
+  <a routerLink="/products/{{product.id}}">
+    <img [src]="product?.url" class="card-img-top" alt="..." />
+  </a>
+  <div class="card-body">
+    <h5 class="card-title">{{product.name}}</h5>
+    <p class="card-text">
+      {{product.description}}
+    </p>
+    <p class="card-text">
+      ${{product.price}}
+    </p>
+   <p>
+    <select class="form-select" [(ngModel)]="quantity">
+      <option [ngValue]="1" selected>1</option>
+      <option [ngValue]="2">2</option>
+      <option [ngValue]="3">3</option>
+      <option [ngValue]="4">4</option>
+      <option [ngValue]="5">5</option>
+      <option [ngValue]="6">6</option>
+      <option [ngValue]="7">7</option>
+      <option [ngValue]="8">8</option>
+      <option [ngValue]="9">9</option>
+    </select>
+   </p>
+    <p>
+      <button type="button" class="btn btn-primary" (click)="addToCart()">Add to cart</button>
+    </p>
+  </div>
+</div>

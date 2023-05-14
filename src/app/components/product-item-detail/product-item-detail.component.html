@@ -1,0 +1,35 @@
+<div class="container">
+  <div class="row justify-content-md-center">
+    <div class="col col-md-4">
+      <img [src]="product?.url" class="img-fluid rounded-start" alt="..." />
+    </div>
+    <div class="col col-md-4">
+      <h5 class="card-title">{{ product?.name }}</h5>
+      <p class="card-text">
+        {{ product?.description }}
+      </p>
+      <p class="card-text">
+        ${{ product?.price }}
+      </p>
+      <p>
+        <select class="form-select" [(ngModel)]="quantity">
+          <option [ngValue]="1" selected>1</option>
+          <option [ngValue]="2">2</option>
+          <option [ngValue]="3">3</option>
+          <option [ngValue]="4">4</option>
+          <option [ngValue]="5">5</option>
+          <option [ngValue]="6">6</option>
+          <option [ngValue]="7">7</option>
+          <option [ngValue]="8">8</option>
+          <option [ngValue]="9">9</option>
+        </select>
+      </p>
+      <p>
+        <button type="button" class="btn btn-primary" (click)="addToCart()">
+          Add to cart
+        </button>
+      </p>
+      <a routerLink="/" class="text-primary">Back to product list</a>
+    </div>
+  </div>
+</div>
