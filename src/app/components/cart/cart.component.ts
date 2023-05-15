@@ -38,8 +38,8 @@ export class CartComponent implements OnInit {
     this.cartService.removeItem(productId);
   }
 
-  updateItem(event: any, productId: number){
-    this.cartService.updateItem(event.target.value, productId)
+  updateItem(quantity: number, productId: number){
+    this.cartService.updateItem(quantity, productId);
   }
 
   onSubmit(){

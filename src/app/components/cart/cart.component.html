@@ -29,8 +29,8 @@
                     quantity:
                     <select
                       class="form-select"
-                      [value]="item.quantity"
-                      (change)="updateItem($event, item.product.id)"
+                      [(ngModel)]="item.quantity"
+                      (ngModelChange)="updateItem($event, item.product.id)"
                     >
                       <option value="1" selected>1</option>
                       <option value="2">2</option>
