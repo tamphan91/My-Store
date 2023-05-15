@@ -15,14 +15,14 @@ export class CartService {
   readonly items$ = this._item.asObservable();
   constructor() {}
 
-  addItem(product: Product, quantity: number) {
+  addItem(cartItem: CartItem) {
     const currentProduct = this._item.value.find(
-      (item) => item.product.id === product.id
+      (item) => item.product.id === cartItem.product.id
     );
     if (currentProduct) {
-      currentProduct.quantity = currentProduct.quantity + quantity;
+      currentProduct.quantity = currentProduct.quantity + cartItem.quantity;
     } else {
-      this._item.value.push({ product, quantity });
+      this._item.value.push(cartItem);
     }
     this._item.next(this._item.value);
     alert('Added product');
